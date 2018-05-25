@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Action ToolBar</string>
+    <string name="activity_new_days">New Days</string>
+    <string name="app_title">Zini Action</string>
+    <string name="activity_better_days">Better Days</string>
+    <string name="share">Share</string>
+</resources>

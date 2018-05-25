@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- to Create drawable icon, right-click drawable > New > image Asset >
+        > Select Toolbar icon > > finish
+        -->
+    <item
+        android:id="@+id/miCompose"
+        android:icon="@drawable/ic_compose"
+        app:showAsAction="ifRoom"
+        android:title="Compose" />
+
+    <item
+        android:id="@+id/miProfile"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="ifRoom|withText"
+        android:title="Profile"/>
+
+    <!-- Use onClick to handle clicks just like buttons
+     then define the onComposeAction in the MainActivity.java
+     -->
+    <item
+        android:id="@+id/item1"
+        android:icon="@drawable/ic_compose"
+        android:onClick="onComposeAction"
+        app:showAsAction="ifRoom"
+        android:title="Compose" />
+
+    <item
+        android:id="@+id/item2"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="ifRoom"
+        android:title="Profile" />
+
+    <item
+        android:id="@+id/miActionButton"
+        app:showAsAction="ifRoom"
+        app:actionLayout="@layout/action_view_button"
+        android:title="Loading..." />
+    <!-- access the btn in main.java, use onPrepareOptionsMenu -->
+
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="5"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView" />
+
+    <!-- Order the menu items, lower integers get higher priority -->
+    <item
+        android:id="@+id/menu_ordinary"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom"
+        android:title="Ordinary" />
+
+    <item
+        android:id="@+id/menu_important"
+        android:orderInCategory="20"
+        app:showAsAction="ifRoom"
+        android:title="Important" />
+
+    <item android:id="@+id/action_share"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+
+    <item
+        android:id="@+id/web_view"
+        android:orderInCategory="201"
+        app:showAsAction="ifRoom"
+        android:title="web search" />
+    <!-- Then create an Intent in the onCreateOptionsMenu() -->
+
+</menu>
